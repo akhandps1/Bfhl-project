@@ -104,7 +104,6 @@ A simple health check endpoint to verify the API status.
 
 1. **Clone the Repository:**
     
-    Bash
     
     ```
     git clone [https://github.com/YOUR_USERNAME/bfhl-api.git](https://github.com/YOUR_USERNAME/bfhl-api.git)
@@ -112,8 +111,7 @@ A simple health check endpoint to verify the API status.
     ```
     
 2. **Install Dependencies:**
-    
-    Bash
+   
     
     ```
     npm install
@@ -123,7 +121,6 @@ A simple health check endpoint to verify the API status.
     
     Create a `.env` file in the root directory and add the following:
     
-    Code snippet
     
     ```
     PORT=3000
@@ -133,7 +130,6 @@ A simple health check endpoint to verify the API status.
     
 4. **Run the Server:**
     
-    Bash
     
     ```
     node index.js
