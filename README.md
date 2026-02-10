@@ -4,7 +4,6 @@ This is a REST API developed for the BFHL (Bajaj Finserv Health Ltd) qualifier a
 
 ## 🚀 Live Deployment
 **Base URL:** https://bfhl-project-beta.vercel.app
-
 ---
 
 ## 🛠️ Tech Stack
