@@ -2,18 +2,17 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 require('dotenv').config();
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
 exports.getAIResponse = async (question) => {
     try {
-        // Strict prompt engineering to ensure single-word response
-        const prompt = `Question: ${question}\n\nInstructions: Provide a strictly single-word answer. No punctuation, no explanation.`;
-        
+        const prompt = `Question: ${question}\n\nInstructions: Provide a strictly single-word answer.`;
         const result = await model.generateContent(prompt);
         const response = await result.response;
         return response.text().trim();
     } catch (error) {
-        console.error("AI Error:", error);
-        return "Error";
+        console.error("AI Error:", error); 
+        return "AI_Service_Unavailable";
     }
 };
